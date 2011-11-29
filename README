@@ -1,0 +1,27 @@
+Wifi Egghunt app
+
+Created by Abdulla K. Al-Ali
+PhD candidate at Northeastern University, Boston, MA.
+Adviser: Dr. Kaushik Chowdhury
+11/29/2011
+
+ ** WifiEggHunt is free software: you can redistribute it and/or modify
+ ** it under the terms of the GNU General Public License as published by
+ ** the Free Software Foundation; using version 3 of the License.
+ **
+ ** WifiEggHunt is distributed in the hope that it will be useful,
+ ** but WITHOUT ANY WARRANTY; without even the implied warranty of
+ ** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ ** GNU General Public License for more details.
+ **
+ ** You should have received a copy of the GNU General Public License
+ ** along with WifiEggHunt.  If not, see <http://www.gnu.org/licenses/>.
+
+
+This software is meant to detect preconfigured static Access Points' MAC
+Address when coming in close proximity to them.
+
+It is programmed as a community service to help students understand how Wireless
+Access points work by finding these Access Points by walking around the Northeastern
+University campus. When students find these access points, a message popups and let's
+them know that they have found an Egg or the Wifi Access Point.
