@@ -44,33 +44,30 @@ public class WifiResultReceiver extends BroadcastReceiver {
 			List<ScanResult> results = main.wifi.getScanResults();
 			List<Entry> entries = new ArrayList<Entry>();
 			for (ScanResult result : results) {
-				
-				
-				for (int i=0; i<Consts.listOfEggs.length; i++) {
-					if (Consts.listOfEggs[i].isMatch(result.BSSID)) {
-						Entry temp = new Entry(result.SSID,result.BSSID,result.level,result.frequency);
-						entries.add(temp);
-						Consts.listOfEggs[i].setExclude(true);
-						break;
+
+				if (!Consts.debug) {
+					//this is for final release
+					for (int i=0; i<Consts.listOfEggs.length; i++) {
+						if (Consts.listOfEggs[i].isMatch(result.BSSID)) {
+							Entry temp = new Entry(result.SSID,result.BSSID,result.level,result.frequency);
+							entries.add(temp);
+							Consts.listOfEggs[i].setExclude(true);
+							break;
+						}
 					}
 				}
-				
-				//Entry temp = new Entry(result.SSID,result.BSSID,result.level,result.frequency);
-				//entries.add(temp);
-				
+
+				else {
+					//this is for debugging
+					Entry temp = new Entry(result.SSID,result.BSSID,result.level,result.frequency);
+					entries.add(temp);
+				}
 				//String toPrint = String.format("Network: %s - MAC: %s - Strengh: %d - Freq: %d", result.SSID, result.BSSID, result.level, result.frequency);
 				//Log.d(Launch.TAG, toPrint);
 			}
-			//add all the rest of found eggs
-			for (int i=0; i<Consts.listOfEggs.length; i++) {
-				if (Consts.listOfEggs[i].isFound() && !Consts.listOfEggs[i].isExclude()) {
-					Entry temp = new Entry(Consts.listOfEggs[i].getNickname(),Consts.listOfEggs[i].getBSSDs()[0],-10,1000);
-					Consts.listOfEggs[i].setExclude(false);
-					entries.add(temp);
-				} else if (Consts.listOfEggs[i].isExclude()) Consts.listOfEggs[i].setExclude(false);
-			}
-			
-			
+
+
+
 			//sort by level
 			try {
 				Comparator<Entry> comparator = new Comparator<Entry>() {
@@ -83,7 +80,16 @@ public class WifiResultReceiver extends BroadcastReceiver {
 			} catch (ClassCastException e) {
 
 			}
-			
+
+			//add all the rest of found eggs
+			for (int i=0; i<Consts.listOfEggs.length; i++) {
+				if (Consts.listOfEggs[i].isFound() && !Consts.listOfEggs[i].isExclude()) {
+					Entry temp = new Entry(Consts.listOfEggs[i].getNickname(),Consts.listOfEggs[i].getBSSDs()[0],-10,1000);
+					Consts.listOfEggs[i].setExclude(false);
+					entries.add(temp);
+				} else if (Consts.listOfEggs[i].isExclude()) Consts.listOfEggs[i].setExclude(false);
+			}
+
 			main.populateListView(entries);
 		}
 	}

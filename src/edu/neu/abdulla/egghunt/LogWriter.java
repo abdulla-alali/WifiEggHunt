@@ -69,7 +69,7 @@ public class LogWriter {
 								bufferedWriter.close();
 								mHandler.post(new Runnable() {
 									public void run() {
-										launch2.displayToast("Success");
+										if (Consts.debug) launch2.displayToast("Success");
 									}
 								});
 							}

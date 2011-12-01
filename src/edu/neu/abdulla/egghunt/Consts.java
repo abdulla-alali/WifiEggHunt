@@ -18,24 +18,27 @@ package edu.neu.abdulla.egghunt;
 
 public class Consts {
 
+	public static boolean debug = false;
+	
 	public static final Eggs[] listOfEggs = {
-		new Eggs(new String[] { "02:21:31:81:b0:7f" }, "Wooden bench", -82, -50), //by wooden bench/tree egan
-		new Eggs(new String[] { "02:26:f6:4c:b1:4b" }, "Wooden bench", -75, -50), //wooden bench 2
 		new Eggs(new String[] { "00:16:01:12:d9:be" }, "My own very home", -55, -50), //home gg-al (discard, testing only)
-		new Eggs(new String[] { "00:24:6c:c8:03:00", "00:24:6c:c8:03:01" }, "Library", -67, -50), //by library
-		new Eggs(new String[] { "00:24:6c:c8:04:21" }, "Shilman", -72, -50), //shilman hall
-		new Eggs(new String[] { "00:21:29:a9:6b:37" }, "40W VilF", -88, -50), //40 w village F
-		new Eggs(new String[] { "30:46:9a:80:69:e4" }, "Wollaston", -66, -50), //Wollaston
-		new Eggs(new String[] { "c0:3f:0e:2c:28:56" }, "Behind WVF", -73, -50), //Behind w village F
-		new Eggs(new String[] { "2e:26:55:62:d1:04" }, "Meserve backside", -74, -50), //Meserve Hall backside
-		new Eggs(new String[] { "00:24:6c:c8:08:21" }, "Willis hall", -80, -50), //Opposite willis hall dept of earth and environmental sciences
-		new Eggs(new String[] { "00:1d:7e:c0:15:a8", "d8:5d:4c:ea:03:46", "00:23:69:8c:ea:ad" }, "L Willis hall", -78, -50), //Left of willis hall
+		new Eggs(new String[] { "00:24:6c:c8:04:21" }, "Shilman", -76, -50), //shilman hall
+		new Eggs(new String[] { "c0:3f:0e:19:54:88" }, "Wollaston", -72, -50), //new Max Wifi
+		new Eggs(new String[] { "00:1d:7e:c0:15:a8", "d8:5d:4c:ea:03:46", "00:23:69:8c:ea:ad" }, "L Willis hall", -75, -50), //after wollaston on the left
+		new Eggs(new String[] { "66:2a:2f:53:7c:99" } , "Meserve 35", -79, -50), //new
+		new Eggs(new String[] { "a0:21:b7:ac:73:27" } , "Tree-Hydrant", -72, -50), //opposite of hydrnant Willis hall
 		new Eggs(new String[] { "00:0f:24:6c:57:31", "00:24:6c:c8:18:a1" }, "CCIS", -79, -50), //CCIS
-		new Eggs(new String[] { "98:fc:11:55:57:fd" }, "Bike stand", -73, -50), //Bike stand 450 Parket st, w village G
+		new Eggs(new String[] { "00:18:f8:4d:be:fb" } , "Bike stand", -80, -50), //new bike stand drop BASS
+
+		new Eggs(new String[] { "2e:22:64:d6:ee:73" } , "Snell Trash", -75, -50), //trash infront of egan's door
+		new Eggs(new String[] { "3a:b6:9b:65:24:d1" } , "Tree Snell", -70, -50), //corner of churchill hall by hayden
+		new Eggs(new String[] { "00:40:10:10:00:03" } , "Tree Hyden", -80, -50), //tree left of snell's main entrance
+		new Eggs(new String[] { "00:24:6c:c8:03:00", "00:24:6c:c8:03:01" }, "Library", -70, -50), //by library
 		new Eggs(new String[] { "00:24:6c:c8:02:c1" }, "Courtesy plz", -69, -50), //Opposite courtesy please board and snell library
-		//new Eggs(new String[] { "00:24:6c:c9:35:01" }, "Bird status", -88, -50), //Outside starbucks and bird in flight sculpture. NOT RELIABLE.. deleted
 		new Eggs(new String[] { "00:24:6c:c9:2c:e0" }, "Starbucks bridge", -83, -50), //Outside starbucks near the bridge and the road
-		new Eggs(new String[] { "00:0b:86:42:bd:a0" }, "Walkway jnct", -71, -50) //On the walk near the junction
+		new Eggs(new String[] { "00:0c:41:14:a0:ec" }, "Walkway jnct", -88, -50), //On the walk near the junction
+		new Eggs(new String[] { "02:23:03:11:51:0c" }, "Ell Hall", -75, -50) //to the right of el hall
+		
 	};
 	
 	
